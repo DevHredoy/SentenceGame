@@ -9,7 +9,6 @@ public class SentenceGameclass {
 
 
     public static void main(String[] args) throws IOException {
-
         UiGame uiGame=new UiGame();
         uiGame.setVisible(true);
     }

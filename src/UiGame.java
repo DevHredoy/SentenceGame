@@ -22,15 +22,16 @@ public class UiGame extends JFrame {
 
 
     UiGame()
-    {       f=new Font("Monospaced",Font.BOLD,35);
+    {   f=new Font("Monospaced",Font.BOLD,35);
         f_2=new Font("SansSerif",Font.PLAIN,28);
         f3=new Font("SansSerif",Font.PLAIN,25);
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setBounds(100,50,420,350);
         this.setTitle("JumbledGame");
 
         Color color=new Color(255,0,255);
-        Color greyColor=new Color(192,192,192);
+        Color reddishColor=new Color(222, 132, 132);
 
         c=this.getContentPane();
         c.setLayout(null);
@@ -59,7 +60,7 @@ public class UiGame extends JFrame {
         input_sentence=new JTextField("please write a sentence and make sure to backspace the white space in the beginning if any ");
 
         input_sentence.setBounds(370+300+150,100+40,300+100+200+200+240+120,50+50);
-        input_sentence.setForeground(greyColor);
+        input_sentence.setForeground(reddishColor);
         input_sentence.setFont(f3);
         c.add(input_sentence);
 
@@ -94,8 +95,11 @@ public class UiGame extends JFrame {
 
                    if(tempSentences.size()==3)
                    {
-                       JOptionPane.showMessageDialog(null,"you have given 3 sentences");
+                      JOptionPane.showMessageDialog(null,"you have given 3 sentences");
+
+
                        NewFrame frame = new NewFrame();//this line is for making a new frame
+
                        frame.setVisible(true);
 
 
